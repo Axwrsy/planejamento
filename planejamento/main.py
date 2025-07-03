@@ -1,6 +1,6 @@
 """
----------------------------------------------------------------------------------------------------------
-       REQUISITOS
+----------------------------------------------------------------------------------------------------------
+         REQUISITOS
 ----------------------------------------------------------------------------------------------------------
 1 - o user deve digitar a qntd de gastos permanentes
 2 - deve digitar o seu salário 
@@ -38,18 +38,29 @@ sobra = salario - soma
 print(f"o que restou do seu salário é {sobra}\n")
 
 #opção de investimento
+# opção de investimento
 resposta = input("deseja ver possibilidade de investimentos? (S/N)\n").lower()
 
 if resposta == 's':
     meta = input("possui alguma meta em especifico? (S/N)\n").lower()
+    
     if meta == 's':
-       valor_Juntar = float(input("qual o valor que você precisa juntar? R$ "))
-       meses = int(input("em quantos meses deseja juntar esse valor? \n"))
-       valor_mensal_necessario = valor_Juntar / meses
+        valor_Juntar = float(input("qual o valor que você precisa juntar? R$ "))
+        meses = int(input("em quantos meses deseja juntar esse valor? \n"))
+        valor_mensal_necessario = valor_Juntar / meses
 
-       print(f"você precisa guardar R$ {valor_mensal_necessario:.2f} por mês.")
+        print(f"você precisa guardar R$ {valor_mensal_necessario:.2f} por mês.")
 
-if valor_mensal_necessario <= sobra:
-    print(f" com sua sobra mensal de R$ {sobra:.2f}, é possível atingir essa meta.\n")
+        if valor_mensal_necessario <= sobra:
+            print(f" Com sua sobra mensal de R$ {sobra:.2f}, é possível atingir essa meta.\n")
+        else:
+            print(f"você precisaria guardar R$ {valor_mensal_necessario:.2f} por mês, "
+                  f"mas o que resta do seu salário é de apenas R$ {sobra:.2f}. "
+                  f"Não é possível juntar esse valor em {meses} meses.")
+    
+    else:
+        print("\njá que vc não tem uma meta em especifico, recomendo que invista 5% do que sobra do seu salário todos os meses, trazendo beneficios a longo prazo pra você! :)")
+        porcentagem = sobra * 0.05
+        print(f"por tanto, no seu caso, o certo a investir seria {porcentagem} por mês \n")
 else:
-    print(f" você precisaria guardar R$ {valor_mensal_necessario:.2f} por mês, mas o que resta do seu salário é de apenas R$ {sobra:.2f}, de modo com que não é possível você juntar em {meses} meses")
+    print("ok, encerrando...")
