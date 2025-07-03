@@ -1,0 +1,3 @@
+Salario: R$ 1600.00
+Gastos: [300.0, 300.0]
+Restou: R$ 1000.00
