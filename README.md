@@ -23,4 +23,4 @@ Este projeto é um sistema em Python que auxilia usuários a organizarem suas fi
 ---
 
 
-![Terminal do projeto](./img/terminal.py.png)
+![Terminal do projeto](./img/terminal-py.png)
