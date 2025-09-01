@@ -21,3 +21,6 @@ Este projeto é um sistema em Python que auxilia usuários a organizarem suas fi
 - Biblioteca [`shelve`](https://docs.python.org/3/library/shelve.html) (padrão do Python)
 
 ---
+
+
+![Terminal do projeto](./terminal.py.png)
